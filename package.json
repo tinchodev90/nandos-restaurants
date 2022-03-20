@@ -8,8 +8,7 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "splash": "react-native link react-native-splash-screen",
-    "generate": "react-native generate-bootsplash ./src/assets/rooster.png --background-color=1C181C   --logo-width=100 --assets-path=./src/assets --flavor=main"
+    "link-splash": "react-native link react-native-splash-screen"
   },
   "dependencies": {
     "@babel/plugin-transform-typescript": "^7.16.8",
