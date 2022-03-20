@@ -8,23 +8,24 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "splash": "react-native link react-native-splash-screen",
     "generate": "react-native generate-bootsplash ./src/assets/rooster.png --background-color=1C181C   --logo-width=100 --assets-path=./src/assets --flavor=main"
   },
   "dependencies": {
     "@babel/plugin-transform-typescript": "^7.16.8",
     "axios": "^0.26.1",
     "react": "17.0.2",
-    "react-native": "0.66.4",
-    "react-native-bootsplash": "^3.1.5",
-    "react-native-config-node": "^0.0.3"
+    "react-native": "0.66.4", 
+    "react-native-config-node": "^0.0.3",
+    "react-native-splash-screen": "^3.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.12.5",
     "@react-native-community/eslint-config": "^2.0.0",
-    "@types/jest": "^26.0.23",
-    "@testing-library/react-native": "^9.0.0",
     "@testing-library/jest-native": "^4.0.2",
+    "@testing-library/react-native": "^9.0.0",
+    "@types/jest": "^26.0.23",
     "@types/react-native": "^0.66.15",
     "@types/react-test-renderer": "^17.0.1",
     "@typescript-eslint/eslint-plugin": "^4.30.0",
@@ -60,6 +61,8 @@
       "json",
       "node"
     ],
-    "modulePathIgnorePatterns": ["<rootDir>/__test__/mocks"]
+    "modulePathIgnorePatterns": [
+      "<rootDir>/__test__/mocks"
+    ]
   }
 }

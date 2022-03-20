@@ -9,6 +9,8 @@ import {
   View,
 } from 'react-native';
 
+import SplashScreen from 'react-native-splash-screen';
+
 import { getAllRestaurants } from '~/features/restaurants//api/getAll';
 import Card from '~/features/restaurants/components/Card';
 import ErrorModal from '~/features/restaurants/components/ErrorModal';
@@ -26,8 +28,10 @@ function List() {
       try {
         setLoading(true);
         const { data: response } = await getAllRestaurants();
+        SplashScreen.hide();
         setRestaurantsList(response?.data.restaurant?.items);
       } catch {
+        SplashScreen.hide();
         setError('Something went wrong');
       } finally {
         setLoading(false);

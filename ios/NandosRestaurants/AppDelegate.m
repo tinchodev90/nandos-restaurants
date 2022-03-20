@@ -12,7 +12,7 @@
 #import <SKIOSNetworkPlugin/SKIOSNetworkAdapter.h>
 #import <FlipperKitReactPlugin/FlipperKitReactPlugin.h>
 
-#import "RNBootSplash.h"
+#import "RNSplashScreen.h"
 
 static void InitializeFlipper(UIApplication *application) {
   FlipperClient *client = [FlipperClient sharedClient];
@@ -50,8 +50,8 @@ static void InitializeFlipper(UIApplication *application) {
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
   return YES;
-  
-  [RNBootSplash initWithStoryboard:@"BootSplash" rootView:rootView];
+
+  [RNSplashScreen show];
   return YES;
 }
 

@@ -2,7 +2,6 @@ package com.nandosrestaurants;
 
 import com.facebook.react.ReactActivity;
 import android.os.Bundle;
-import com.zoontek.rnbootsplash.RNBootSplash;
 
 public class MainActivity extends ReactActivity {
 

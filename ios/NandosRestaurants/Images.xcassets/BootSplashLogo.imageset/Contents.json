@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "bootsplash_logo.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "bootsplash_logo@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "bootsplash_logo@3x.png",
+      "filename" : "launch_screen.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
