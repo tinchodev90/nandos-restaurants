@@ -35,6 +35,6 @@ Execute:
 ``` yarn lint ```
 
 ## Observations
-- Splash screen was implemented.
+- Splash screen was implemented as a bonus.
 - The app gets the app version from the native code through a native bridging, without using any third party library.
 - The list of restaurants implements a FlatList component in order to avoid performance problems when scrolling a big list.
