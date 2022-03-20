@@ -18,9 +18,13 @@ Node v12.14.1
 ``` yarn ios```
 
 ## Run in Android
-_Point the ```android/local.properties``` file to your SDK folder if needed_
+Prerequisites:
 
-_Open Android Studio and open an Android Simulator_
+_1) Point the ```android/local.properties``` file to your SDK folder if needed._
+
+_2) Open Android Studio and open an Android Simulator._
+
+Execute:
 
 ``` yarn android ```
 
