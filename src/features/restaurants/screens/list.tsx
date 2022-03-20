@@ -28,12 +28,11 @@ function List() {
       try {
         setLoading(true);
         const { data: response } = await getAllRestaurants();
-        SplashScreen.hide();
         setRestaurantsList(response?.data.restaurant?.items);
       } catch {
-        SplashScreen.hide();
         setError('Something went wrong');
       } finally {
+        SplashScreen.hide();
         setLoading(false);
       }
     };
@@ -59,7 +58,7 @@ function List() {
 
   if (loading) {
     return (
-      <View style={[styles.container, styles.horizontal]}>
+      <View style={[styles.loading]}>
         <ActivityIndicator size="large" color={colors.orange1} />
       </View>
     );
@@ -72,15 +71,20 @@ function List() {
         data={restaurantsList}
         renderItem={renderItem}
         keyExtractor={item => item.name}
-        ListFooterComponent={<View style={styles.listSpacing} />}
         ListHeaderComponent={<VersionInfo />}
+        ListFooterComponent={<View style={styles.listSpacing} />}
         ListEmptyComponent={
-          <View testID="empty-state" style={[styles.container, styles.horizontal]}>
-            <Text>No results found</Text>
-          </View>
+          <>
+            {!loading && (
+              <View testID="empty-state" style={[styles.container, styles.horizontal]}>
+                <Text>No results found</Text>
+              </View>
+            )}
+          </>
         }
       />
       <ErrorModal message={error} visible={!!error} onClose={() => setError('')} />
+      <VersionInfo />
     </SafeAreaView>
   );
 }
@@ -92,6 +96,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
+  },
+  loading: {
+    display: 'flex',
+    flexGrow: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%',
   },
   horizontal: {
     flexDirection: 'row',
