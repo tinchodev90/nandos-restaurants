@@ -18,6 +18,8 @@ Node v12.14.1
 ``` yarn ios```
 
 ## Run in Android
+_Point the ```android/local.properties``` file to your SDK folder if needed_
+
 _Open Android Studio and open an Android Simulator_
 
 ``` yarn android ```
@@ -29,6 +31,6 @@ _Open Android Studio and open an Android Simulator_
 ``` yarn lint ```
 
 ## Observations
-- Splash screen was implemented for iOS.
+- Splash screen was implemented.
 - The app gets the app version from the native code through a native bridging, without using any third party library.
 - The list of restaurants implements a FlatList component in order to avoid performance problems when scrolling a big list.
